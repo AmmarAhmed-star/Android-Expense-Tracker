@@ -1,6 +1,6 @@
 # Expense Tracker App - Android
 
-Roz ka kharcha track karo, balance samjho.
+Daily Track on Expense and Understand on You Balance.
 
 ## Features
 - Balance Card, Add Expense, Transaction List, Filters, Monthly Chart
