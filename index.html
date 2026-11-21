@@ -1,139 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style>
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Expense Tracker - Android App | Ammar Ahmed</title>
+<title>Expense Tracker - Dark Premium | Ammar Ahmed</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#FFF7ED;color:#1E293B}
-.topnav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#fff;position:sticky;top:0;box-shadow:0 2px 12px rgba(0,0,0,.06);z-index:10}
-.logo{font-weight:800;font-size:20px}.logo span{color:#EA580C}.live{background:#DCFCE7;color:#166534;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700}
-.hero{max-width:1100px;margin:0 auto;padding:42px 20px 20px;text-align:center}
-.hero h1{font-size:42px;line-height:1.05;margin:8px 0}.hero h1 span{color:#EA580C}
-.hero p{color:#475569;max-width:720px;margin:0 auto;line-height:1.6}
-.pill{display:inline-block;background:#fff;border:1px solid #E2E8F0;padding:7px 12px;border-radius:999px;margin:6px 4px;font-size:13px;font-weight:600}
-.wrap{max-width:1100px;margin:0 auto;padding:18px 20px 40px}
-.card{background:#fff;border:1px solid #F1F5F9;border-radius:18px;padding:20px;margin:14px 0;box-shadow:0 6px 22px rgba(0,0,0,.04)}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
-.tab{border:1px solid #E2E8F0;background:#F8FAFC;padding:9px 14px;border-radius:999px;cursor:pointer;font-weight:700;font-size:13px}
-.tab.active{background:#EA580C;color:#fff;border-color:#EA580C}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.stat{background:#FFF7ED;border:1px solid #FED7AA;border-radius:14px;padding:16px;text-align:center}.stat b{font-size:22px;display:block}.stat span{font-size:12px;color:#64748B}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.feat{background:#F8FAFC;border-radius:14px;padding:16px}.feat b{font-size:15px}.feat p{font-size:13px;color:#475569;line-height:1.5;margin:6px 0 0}
-.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}
-input,select{padding:10px 12px;border:1px solid #E2E8F0;border-radius:10px;font-size:14px}
-button{padding:10px 16px;border:0;border-radius:999px;font-weight:700;cursor:pointer;background:#0F172A;color:#fff}
-button.green{background:#16A34A}button.secondary{background:#E2E8F0;color:#111}button.orange{background:#EA580C}
-.chip{display:inline-block;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid #E2E8F0;margin:4px;cursor:pointer;font-weight:600;font-size:13px}.chip.on{background:#EA580C;color:#fff;border-color:#EA580C}
-.list-box{background:#F8FAFC;border-radius:12px;padding:14px}.small{font-size:13px;color:#475569;line-height:1.6}
-.phone{width:210px;height:420px;border:8px solid #111;border-radius:32px;margin:0 auto;overflow:hidden;background:#fff;position:relative}
-.phone-top{height:170px;background:linear-gradient(135deg,#EA580C,#F59E0B);color:#fff;padding:18px}.phone-top b{font-size:22px}
-.exp-row{display:flex;justify-content:space-between;padding:10px 12px;border-bottom:1px solid #F1F5F9;font-size:13px}
-.bar{height:10px;background:#FDE68A;border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;background:#EA580C}
-.footer{text-align:center;padding:20px;color:#64748B;font-size:13px}
-@media(max-width:700px){.hero h1{font-size:30px}.stats,.grid{grid-template-columns:1fr 1fr}}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:#0A0F0A;color:#E2E8F0;overflow-x:hidden}
+.topnav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(15,23,15,.88);backdrop-filter:blur(16px);position:sticky;top:0;box-shadow:0 2px 20px rgba(34,197,94,.14);z-index:10;border-bottom:1px solid #1A2E1A}
+.logo{font-weight:900;font-size:22px;color:#fff}.logo span{color:#22C55E}.live{background:linear-gradient(90deg,#16A34A,#22C55E);color:#000;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:.5px;box-shadow:0 0 18px rgba(34,197,94,.5)}
+.hero{max-width:1120px;margin:0 auto;padding:52px 22px 20px;text-align:center;position:relative}
+.hero:before{content:'';position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:800px;height:420px;background:radial-gradient(45% 60% at 50% 25%,rgba(34,197,94,.18),rgba(16,185,129,.08),rgba(0,0,0,0));pointer-events:none}
+.hero h1{font-size:50px;line-height:.92;margin:12px 0;font-weight:900;letter-spacing:-1px;color:#fff}.hero h1 span{background:linear-gradient(90deg,#22C55E,#4ADE80,#86EFAC);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 30px rgba(34,197,94,.35)}
+.hero p{color:#94A3B8;max-width:760px;margin:0 auto;line-height:1.7;font-size:15.5px}
+.pill{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(34,197,94,.18);padding:8px 14px;border-radius:999px;margin:6px 4px;font-size:13px;font-weight:700;color:#86EFAC;backdrop-filter:blur(8px)}
+.wrap{max-width:1120px;margin:0 auto;padding:18px 22px 44px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(34,197,94,.14);border-radius:22px;padding:22px;margin:16px 0;box-shadow:0 12px 32px rgba(0,0,0,.4),0 0 0 1px rgba(34,197,94,.08) inset;backdrop-filter:blur(12px)}
+.tabs{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:18px}
+.tab{border:1px solid rgba(34,197,94,.18);background:rgba(255,255,255,.04);padding:10px 16px;border-radius:999px;cursor:pointer;font-weight:800;font-size:13px;transition:.25s;color:#94A3B8}.tab:hover{transform:translateY(-1px);box-shadow:0 0 18px rgba(34,197,94,.18);color:#fff}.tab.active{background:linear-gradient(90deg,#16A34A,#22C55E);color:#000;border-color:#22C55E;box-shadow:0 0 22px rgba(34,197,94,.5),0 8px 20px rgba(0,0,0,.3)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(34,197,94,.14);border-radius:18px;padding:18px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.3);transition:.25s}.stat:hover{transform:translateY(-3px);box-shadow:0 0 20px rgba(34,197,94,.18)}.stat b{font-size:24px;display:block;color:#fff}.stat span{font-size:12px;color:#64748B;font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.feat{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px;transition:.25s}.feat:hover{transform:translateY(-2px);border-color:rgba(34,197,94,.22);box-shadow:0 0 18px rgba(34,197,94,.12)}.feat b{font-size:15px;color:#fff}.feat p{font-size:13.5px;color:#94A3B8;line-height:1.6;margin:7px 0 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
+input,select{padding:11px 13px;border:1px solid rgba(34,197,94,.18);border-radius:12px;font-size:14px;background:rgba(0,0,0,.3);color:#E2E8F0}
+button{padding:11px 18px;border:0;border-radius:999px;font-weight:800;cursor:pointer;background:#0F172A;color:#fff;transition:.25s;box-shadow:0 6px 16px rgba(0,0,0,.4)}button:hover{transform:translateY(-1px)}button.green{background:linear-gradient(90deg,#16A34A,#22C55E);color:#000;box-shadow:0 0 18px rgba(34,197,94,.4)}button.secondary{background:rgba(255,255,255,.08);color:#E2E8F0}
+.chip{display:inline-block;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);margin:4px;cursor:pointer;font-weight:700;font-size:13px;transition:.25s;color:#94A3B8}.chip:hover{border-color:rgba(34,197,94,.28)}.chip.on{background:linear-gradient(90deg,#16A34A,#22C55E);color:#000;border-color:#22C55E;box-shadow:0 0 14px rgba(34,197,94,.45)}
+.list-box{background:rgba(0,0,0,.25);border:1px solid rgba(34,197,94,.12);border-radius:14px;padding:16px}
+.small{font-size:13px;color:#94A3B8;line-height:1.7}
+.phone{width:220px;height:440px;border:9px solid #111;border-radius:36px;margin:0 auto;overflow:hidden;background:#0A0F0A;position:relative;box-shadow:0 20px 40px rgba(0,0,0,.6),0 0 30px rgba(34,197,94,.18)}
+.phone-top{height:172px;background:linear-gradient(135deg,#16A34A,#22C55E,#4ADE80);color:#000;padding:20px}.phone-top b{font-size:24px}
+.exp-row{display:flex;justify-content:space-between;padding:11px 12px;border-bottom:1px solid rgba(255,255,255,.06);font-size:13.5px;color:#E2E8F0}
+.bar{height:12px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#16A34A,#22C55E);box-shadow:0 0 10px rgba(34,197,94,.6)}
+.footer{text-align:center;padding:24px;color:#475569;font-size:13px}
+@media(max-width:700px){.hero h1{font-size:34px}.stats,.grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
-<div class="topnav"><div class="logo">💰 Expense<span>Tracker</span> <span style="font-size:12px;color:#64748B;font-weight:500">• Android App • By Ammar Ahmed</span></div><div class="live">● LIVE</div></div>
-<div class="hero"><div class="pill">✦ Android • Kotlin / Java • Offline First</div><h1>Where Did Your Money Go?<br><span>Now Track Every Rupee.</span></h1><p>Daily expenses, monthly budget, category-wise reports — all in one app. Simple, fast and 100% private. No login, no ads, data stays only on your device.</p><div><span class="pill">🔥 LIVE Demo</span><span class="pill">📱 Android App Showcase</span><span class="pill">🔒 100% Offline & Private</span></div></div>
+<div class="topnav"><div class="logo">💰 Expense<span>Tracker</span> <span style="font-size:12px;color:#64748B;font-weight:600">• Dark Premium • Ammar Ahmed</span></div><div class="live">● DARK PREMIUM</div></div>
+<div class="hero"><div class="pill">✦ Dark Premium • Neon Green • Startup Feel</div><h1>Where Did Your<br><span>Money Go?</span></h1><p><b>Dark Premium Theme</b> — Black + Neon Green — Modern, premium, startup-like. Attractive for night users, saves battery, looks expensive. Best for portfolio.</p><div><span class="pill">🌙 Dark Mode</span><span class="pill">💚 Neon Green</span><span class="pill">✨ Premium Shadows</span></div></div>
 <div class="wrap">
 <div class="card">
-<div class="tabs" id="tabs">
-<button class="tab active" type="button" data-tab="overview">📊 Overview</button>
-<button class="tab" type="button" data-tab="demo">🧪 Live Demo</button>
-<button class="tab" type="button" data-tab="features">✨ Features</button>
-<button class="tab" type="button" data-tab="screens">📱 App Screens</button>
-<button class="tab" type="button" data-tab="tech">🛠️ Tech Stack</button>
-<button class="tab" type="button" data-tab="download">⬇️ Download</button>
-</div>
-
-<div id="panel-overview" style="display:block">
-<h3 style="margin:0">📊 Overview — Today's Spending at a Glance</h3><p class="small">This is a live web demo of the Android app with the same logic. Add an expense below and watch the total and budget bar update live.</p>
-<div class="stats" style="margin-top:12px"><div class="stat"><b id="totalSpent">₹0</b><span>Total Spent (This Month)</span></div><div class="stat"><b id="totalCount">0</b><span>Total Entries</span></div><div class="stat"><b id="budgetLeft">₹5,000</b><span>Budget Left (₹5,000)</span></div><div class="stat"><b id="topCat">—</b><span>Top Category</span></div></div>
-<div class="list-box" style="margin-top:12px"><b>Budget Progress</b><div class="bar" style="margin-top:8px"><i id="budgetBar" style="width:0%"></i></div><p class="small" id="budgetText" style="margin:8px 0 0">Budget: ₹0 / ₹5,000 used</p></div>
-</div>
-
-<div id="panel-demo" style="display:none">
-<h3 style="margin:0">🧪 Live Demo — Try Adding an Expense</h3><p class="small">This is how it works in the real app too. Select a category, enter an amount, and press Add.</p>
-<div class="controls"><label>Title</label><input id="expTitle" placeholder="e.g. Tea, Petrol, Grocery" style="min-width:180px"><label>Amount ₹</label><input id="expAmt" type="number" placeholder="100" style="width:110px"><label>Category</label><select id="expCat"><option>🍔 Food</option><option>⛽ Travel</option><option>🛒 Shopping</option><option>📱 Recharge</option><option>🏠 Rent / Bills</option><option>🎬 Entertainment</option></select><button type="button" class="green" onclick="addExpense()">➕ Add Expense</button><button type="button" class="secondary" onclick="clearExpenses()">🗑️ Clear All</button></div>
-<div id="catChips"><span class="chip" onclick="filterCat('All',this)">All</span><span class="chip" onclick="filterCat('🍔 Food',this)">🍔 Food</span><span class="chip" onclick="filterCat('⛽ Travel',this)">⛽ Travel</span><span class="chip" onclick="filterCat('🛒 Shopping',this)">🛒 Shopping</span><span class="chip" onclick="filterCat('📱 Recharge',this)">📱 Recharge</span></div>
-<div class="list-box" style="margin-top:12px"><b>Recent Expenses:</b><div id="expList"><p class="small">No expenses yet — add one above.</p></div></div>
-</div>
-
-<div id="panel-features" style="display:none">
-<h3 style="margin:0">✨ Features — What's Inside the App?</h3>
-<div class="grid" style="margin-top:12px">
-<div class="feat"><b>➕ Add Expense in 5 Seconds</b><p>Title + Amount + Category — that's it. Date is saved automatically.</p></div>
-<div class="feat"><b>📊 Category Report</b><p>See where your money goes most — Food, Travel, Shopping and more.</p></div>
-<div class="feat"><b>💰 Monthly Budget</b><p>Set a budget and the progress bar shows how much is left.</p></div>
-<div class="feat"><b>🔍 Search & Filter</b><p>Filter by category and search past expenses instantly.</p></div>
-<div class="feat"><b>📈 Daily / Weekly / Monthly View</b><p>Today, this week, this month — 3 views in one place.</p></div>
-<div class="feat"><b>🔒 100% Offline</b><p>No login, no internet needed. Data stays on your phone.</p></div>
+<div class="tabs"><button class="tab active" type="button" data-tab="overview">📊 Overview</button><button class="tab" type="button" data-tab="demo">🧪 Demo</button><button class="tab" type="button" data-tab="languages">💻 Languages</button><button class="tab" type="button" data-tab="screens">📱 Screens</button></div>
+<div id="panel-overview" style="display:block"><h3 style="margin:0;color:#fff">📊 Dark Premium — Overview</h3><p class="small">Neon green glow + dark glass cards + blurred navbar — most attractive theme for Expense Tracker.</p><div class="stats" style="margin-top:14px"><div class="stat"><b id="totalSpent">₹0</b><span>Total Spent</span></div><div class="stat"><b id="totalCount">0</b><span>Entries</span></div><div class="stat"><b id="budgetLeft">₹5,000</b><span>Budget Left</span></div><div class="stat"><b id="topCat">—</b><span>Top Category</span></div></div><div class="list-box" style="margin-top:14px"><b style="color:#fff">Budget Progress — Neon Green</b><div class="bar" style="margin-top:10px"><i id="budgetBar" style="width:0%"></i></div><p class="small" id="budgetText" style="margin:10px 0 0">Budget: ₹0 / ₹5,000 used</p></div></div>
+<div id="panel-demo" style="display:none"><h3 style="margin:0;color:#fff">🧪 Dark Demo</h3><div class="controls"><input id="expTitle" placeholder="Title"><input id="expAmt" type="number" placeholder="100" style="width:110px"><select id="expCat"><option>🍔 Food</option><option>⛽ Travel</option><option>🛒 Shopping</option><option>📱 Recharge</option></select><button type="button" class="green" onclick="addExpense()">➕ Add</button><button type="button" class="secondary" onclick="clearExpenses()">Clear</button></div><div class="list-box"><div id="expList"><p class="small">No expenses yet.</p></div></div></div>
+<div id="panel-languages" style="display:none"><h3 style="margin:0;color:#fff">💻 6 Languages Used</h3><p class="small">Kotlin 55% • Java 20% • XML 15% • Gradle 6% • SQLite 4% • HTML/CSS/JS — Showcase page is attractive dark theme</p><div class="list-box" style="margin-top:12px"><b style="color:#fff">CSS Tricks in Dark Theme</b><p class="small" style="margin:6px 0 0">• background: #0A0F0A (deep black-green)<br>• backdrop-filter: blur(16px) for glass<br>• linear-gradient neon green for buttons<br>• box-shadow: 0 0 18px rgba(34,197,94,.5) — neon glow<br>• border: 1px solid rgba(34,197,94,.14) — subtle green border</p></div></div>
+<div id="panel-screens" style="display:none"><h3 style="margin:0;color:#fff">📱 Dark Phone Preview</h3><div style="display:flex;justify-content:center;margin-top:14px"><div class="phone"><div class="phone-top"><span style="font-size:12px;opacity:.8">Total Spent</span><b id="phoneTotal">₹0</b><p style="font-size:12px">Left: <span id="phoneLeft">₹5,000</span></p></div><div><div class="exp-row"><span>🍔 Tea</span><b>- ₹50</b></div><div class="exp-row"><span>⛽ Petrol</span><b>- ₹500</b></div></div></div></div></div>
 </div>
 </div>
-
-<div id="panel-screens" style="display:none">
-<h3 style="margin:0">📱 App Screens — How the App Looks</h3><p class="small">This is a demo phone preview — the Home screen of the real app looks like this.</p>
-<div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:12px">
-<div class="phone"><div class="phone-top"><span style="font-size:12px;opacity:.9">Total Spent • This Month</span><b id="phoneTotal">₹0</b><p style="font-size:12px;margin:6px 0 0">Budget Left: <span id="phoneLeft">₹5,000</span></p></div><div id="phoneList"><div class="exp-row"><span>🍔 Tea + Snacks</span><b>- ₹50</b></div><div class="exp-row"><span>⛽ Petrol</span><b>- ₹500</b></div><div class="exp-row"><span>🛒 Grocery</span><b>- ₹850</b></div></div><div style="position:absolute;bottom:12px;left:0;right:0;text-align:center"><span style="background:#EA580C;color:#fff;padding:10px 18px;border-radius:999px;font-weight:700;font-size:13px">+ Add Expense</span></div></div>
-<div style="max-width:320px"><h4 style="margin:6px 0">Why Users Love It?</h4><p class="small">• Add expense in 1 tap<br>• No sign-up, no ads<br>• Clean and simple UI<br>• Lightweight — runs fast even on low-end phones<br>• Dark mode ready</p><div class="list-box"><b>Rating Preview</b><p class="small" style="margin:4px 0 0">⭐⭐⭐⭐⭐ 4.8 / 5 — "Simple and very useful app"</p></div></div>
-</div>
-</div>
-
-<div id="panel-tech" style="display:none">
-<h3 style="margin:0">🛠️ Tech Stack — How It Was Built</h3>
-<div class="grid" style="margin-top:12px">
-<div class="feat"><b>📱 Android (Kotlin / Java)</b><p>Native Android — fast, smooth, Play Store ready.</p></div>
-<div class="feat"><b>🗄️ Room / SQLite</b><p>Offline database — data saved on device, works without internet.</p></div>
-<div class="feat"><b>🎨 Material Design 3</b><p>Modern UI — Orange + Cream theme, rounded cards.</p></div>
-<div class="feat"><b>🌐 GitHub Pages (This Page)</b><p>This showcase page is built in HTML + CSS + JS — demo + docs for the app.</p></div>
-</div>
-<p class="small" style="margin-top:12px"><b>Repo:</b> github.com/ammarahmed-star/Android-Expense-Tracker &nbsp;|&nbsp; <b>Live:</b> ammarahmed-star.github.io/Android-Expense-Tracker/</p>
-</div>
-
-<div id="panel-download" style="display:none">
-<h3 style="margin:0">⬇️ Download / Source Code</h3><p class="small">APK is not on Play Store yet — you can view / download the source code from GitHub. For recruiters, the code is enough to review.</p>
-<div class="controls"><button type="button" class="orange" onclick="window.open('https://github.com/ammarahmed-star/Android-Expense-Tracker','_blank')">📂 View on GitHub</button><button type="button" onclick="window.open('https://github.com/ammarahmed-star/Android-Expense-Tracker/archive/refs/heads/main.zip','_blank')">⬇️ Download ZIP</button><button type="button" class="secondary" onclick="alert('APK Build: Android Studio → Build → Generate APK. Build from main branch.')">📱 How to Build APK?</button></div>
-<div class="list-box"><b>How to Run in Android Studio?</b><p class="small" style="margin:6px 0 0">1. Download ZIP from GitHub → Extract<br>2. Android Studio → Open Project<br>3. Gradle Sync → Run on Emulator / Phone<br>4. Done — app will run</p></div>
-</div>
-
-</div>
-<div class="card"><h3 style="margin:0 0 8px">💡 Why I Built This?</h3><p class="small" style="margin:0">I noticed that by the end of the month, I never knew where my money went. So I built a simple Expense Tracker — no login, no ads, only useful features. This is my first complete Android + Local Database project.</p></div>
-</div>
-<div class="footer">Expense Tracker • By <b>Ammar Ahmed</b> • Android • Private — Data stays on device</div>
+<div class="footer">Dark Premium Theme • Neon Green Glow • By Ammar Ahmed</div>
 <script>
-var expenses=[];var curFilter='All';var BUDGET=5000;
+var expenses=[],BUDGET=5000;
 window.switchTab=function(tab){document.querySelectorAll('.tab').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-tab')===tab)});document.querySelectorAll('[id^="panel-"]').forEach(function(el){el.style.display=(el.id==='panel-'+tab)?'block':'none'})};
-function renderExpenses(){var total=expenses.reduce(function(a,e){return a+e.amt},0);var left=Math.max(0,BUDGET-total);document.getElementById('totalSpent').innerText='₹'+total.toLocaleString('en-IN');document.getElementById('totalCount').innerText=expenses.length;document.getElementById('budgetLeft').innerText='₹'+left.toLocaleString('en-IN');document.getElementById('phoneTotal').innerText='₹'+total.toLocaleString('en-IN');document.getElementById('phoneLeft').innerText='₹'+left.toLocaleString('en-IN');var pct=Math.min(100,Math.round(total/BUDGET*100));document.getElementById('budgetBar').style.width=pct+'%';document.getElementById('budgetText').innerText='Budget: ₹'+total+' / ₹'+BUDGET+' used ('+pct+'%)';var counts={};expenses.forEach(function(e){counts[e.cat]=(counts[e.cat]||0)+e.amt});var top='—',mx=0;Object.keys(counts).forEach(function(k){if(counts[k]>mx){mx=counts[k];top=k}});document.getElementById('topCat').innerText=top;var list=document.getElementById('expList');var show=expenses.filter(function(e){return curFilter==='All'||e.cat===curFilter});if(!show.length){list.innerHTML='<p class="small">No expenses in this filter.</p>'}else{list.innerHTML=show.map(function(e){return '<div class="exp-row"><span>'+e.cat+' • '+e.title+'</span><b>- ₹'+e.amt+'</b></div>'}).join('')}}
-function addExpense(){var t=document.getElementById('expTitle').value.trim();var a=parseInt(document.getElementById('expAmt').value);var c=document.getElementById('expCat').value;if(!t||!a){alert('Please enter both Title and Amount');return}expenses.unshift({title:t,amt:a,cat:c});localStorage.setItem('exp_demo',JSON.stringify(expenses));document.getElementById('expTitle').value='';document.getElementById('expAmt').value='';renderExpenses();alert('Expense added ✅')}
-function clearExpenses(){if(!confirm('Clear all demo expenses?'))return;expenses=[];localStorage.removeItem('exp_demo');renderExpenses()}
-function filterCat(cat,el){curFilter=cat;document.querySelectorAll('#catChips .chip').forEach(function(c){c.classList.remove('on')});if(el)el.classList.add('on');renderExpenses()}
-try{expenses=JSON.parse(localStorage.getItem('exp_demo')||'[]')}catch(e){expenses=[]}
-renderExpenses();
+function renderExpenses(){var total=expenses.reduce(function(a,e){return a+e.amt},0);var left=Math.max(0,BUDGET-total);document.getElementById('totalSpent').innerText='₹'+total;document.getElementById('totalCount').innerText=expenses.length;document.getElementById('budgetLeft').innerText='₹'+left;document.getElementById('phoneTotal').innerText='₹'+total;document.getElementById('phoneLeft').innerText='₹'+left;var pct=Math.min(100,Math.round(total/BUDGET*100));document.getElementById('budgetBar').style.width=pct+'%';document.getElementById('budgetText').innerText='Budget: ₹'+total+' / ₹'+BUDGET+' ('+pct+'%)';var counts={};expenses.forEach(function(e){counts[e.cat]=(counts[e.cat]||0)+e.amt});var top='—',mx=0;Object.keys(counts).forEach(function(k){if(counts[k]>mx){mx=counts[k];top=k}});document.getElementById('topCat').innerText=top;var list=document.getElementById('expList');if(!expenses.length)list.innerHTML='<p class="small">No expenses yet.</p>';else list.innerHTML=expenses.map(function(e){return '<div class="exp-row"><span>'+e.cat+' • '+e.title+'</span><b>- ₹'+e.amt+'</b></div>'}).join('')}
+function addExpense(){var t=document.getElementById('expTitle').value.trim();var a=parseInt(document.getElementById('expAmt').value);var c=document.getElementById('expCat').value;if(!t||!a){alert('Enter Title & Amount');return}expenses.unshift({title:t,amt:a,cat:c});renderExpenses()}
+function clearExpenses(){expenses=[];renderExpenses()}
 document.querySelectorAll('.tab').forEach(function(btn){btn.addEventListener('click',function(ev){ev.preventDefault();var t=btn.getAttribute('data-tab');if(t)window.switchTab(t)})});
+renderExpenses();
 </script>
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</body>
 </html>
